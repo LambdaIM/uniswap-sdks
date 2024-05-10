@@ -48,6 +48,7 @@ export const V2_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.POLYGON]: '0x9e5A52f57b3038F1B8EeE45F28b3C1967e22799C',
   [ChainId.CELO]: '0x79a530c8e2fA8748B7B40dd3629C0520c2cCf03f',
   [ChainId.BLAST]: '0x5C346464d33F90bABaf70dB6388507CC889C1070',
+  [ChainId.LAMBDA]: '0x4D71DF0d9416FA02E6fD251bFAd5a0919F9273e4',
 }
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
@@ -63,6 +64,7 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
   [ChainId.BNB]: '0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24',
   [ChainId.POLYGON]: '0xedf6066a2b290c185783862c7f4776a2c8077ad1',
   [ChainId.BLAST]: '0xBB66Eb1c5e875933D44DAe661dbD80e5D9B03035',
+  [ChainId.LAMBDA]: '0x882DCF18e0a8700E4242Fdc294af4adC37F4c546',
 }
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
@@ -236,6 +238,26 @@ const BLAST_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x549FEB8c9bd4c12Ad2AB27022dA12492aC452B66',
 }
 
+const LAMBDA_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0x1B0CAB9855148D55B9e26E83e87887425ed2bb53',
+  multicallAddress: '0xd8a68d2e6880dc062bE44510EF5f28717ea3363a',
+  quoterAddress: '0x0f92E2a585Df7349940A70ccb298dBfC001feeE5',
+  v3MigratorAddress: '0x57cAa1BDE0628fFaAAE74dA9Edd10B38db9b4B20',
+  nonfungiblePositionManagerAddress: '0xd25A7c9Ed87aB453CfC18b67866592F4ff5b59aA',
+  tickLensAddress: '0x8A409bF3ff8C75f205814686f187dfc350A6D1D1',
+  swapRouter02Address: '0x995427f86E5DA37176495329EDb00d3a274Bec62',
+}
+
+const LAMBDA_HOLESKY_ADDRESS: ChainAddresses = {
+  v3CoreFactoryAddress: '0xFd56959Df0bb74f629d9412eC481aF467576B3fd',
+  multicallAddress: '0x75b31b1A6A5dB15326347eD3BA8BA959DCfA9920',
+  quoterAddress: '0xfD613eCa1DDDD7a62847768BbD72D0595246a81B',
+  v3MigratorAddress: '0xefd2a2e41Bf8a44474aA008BD65845f53aAB5288',
+  nonfungiblePositionManagerAddress: '0xE34E42Bc964212491b43D8c6Bf7Adf2c69C4eeAF',
+  tickLensAddress: '0x98Cd14b964983c056458A6A255ef0c6C6A3AEc46',
+  swapRouter02Address: '0x7eBD8FB3db5E986E187CE6153B746b2283024B82',
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -258,6 +280,8 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.ZORA_SEPOLIA]: ZORA_SEPOLIA_ADDRESSES,
   [ChainId.ROOTSTOCK]: ROOTSTOCK_ADDRESSES,
   [ChainId.BLAST]: BLAST_ADDRESSES,
+  [ChainId.LAMBDA]: LAMBDA_ADDRESSES,
+  [ChainId.LAMBDA_HOLESKY]: LAMBDA_HOLESKY_ADDRESS,
 }
 
 /* V3 Contract Addresses */
